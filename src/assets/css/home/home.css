@@ -1,0 +1,91 @@
+.revenue {
+  display: flex !important;
+  width: 260px;
+  height: 90px;
+  margin: 35px 0 0 45px;
+  border-radius: 5px;
+  background-color: white;
+  align-content: center;
+  font-size: unset !important;
+
+  .revenue-icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    /* object-fit: contain;
+  image-rendering: optimizeQuality; */
+  }
+  span {
+    position: absolute;
+    top: 110px;
+    left: 130px;
+    font-size: 14px !important;
+  }
+  p {
+    position: absolute;
+    top: 80px;
+    left: 130px;
+    font-weight: 700;
+    font-size: 18px !important;
+  }
+}
+
+.wallet {
+  display: flex !important;
+  width: 260px;
+  height: 90px;
+  margin: 35px 0 0 45px;
+  border-radius: 5px;
+  background-color: white;
+  align-content: center;
+  font-size: unset !important;
+  .wallet-icon {
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+    /* object-fit: contain;
+  image-rendering: optimizeQuality; */
+  }
+  span {
+    position: absolute;
+    top: 110px;
+    left: 450px;
+    font-size: 14px !important;
+  }
+  p {
+    position: absolute;
+    top: 80px;
+    left: 450px;
+    font-weight: 700;
+    font-size: 18px !important;
+  }
+}
+
+.profit {
+  display: flex !important;
+  width: 260px;
+  height: 90px;
+  margin: 35px 0 0 45px;
+  border-radius: 5px;
+  background-color: white;
+  align-content: center;
+  font-size: unset !important;
+  .profit-icon {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+  }
+  span {
+    position: absolute;
+    top: 110px;
+    left: 745px;
+    font-size: 14px !important;
+  }
+  p {
+    position: absolute;
+    top: 80px;
+    left: 745px;
+    font-weight: 700;
+    font-size: 18px !important;
+  }
+}
