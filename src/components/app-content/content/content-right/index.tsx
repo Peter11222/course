@@ -2,16 +2,14 @@ import React from 'react'
 import { ContentUp } from '@/components/app-content/content/content-right/style'
 
 import { MinusOutlined } from '@ant-design/icons'
-import HomeUp from '@/views/content-views/home/home-up'
 
-import HomeDown from '@/views/content-views/home/home-down'
+import Home from '@/views/home'
 const RightContent: React.FC = () => {
   return (
-    <div>
+    <div className="right-content">
       <ContentUp>
         <MinusOutlined />
-        <HomeUp />
-        <HomeDown />
+        <Home />
       </ContentUp>
     </div>
   )

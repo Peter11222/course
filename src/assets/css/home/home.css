@@ -1,8 +1,12 @@
+body {
+  overflow-x: hidden; /* 横向溢出时显示滚动条 */
+  min-width: 100vw; /* 至少占满视口宽度 */
+}
 .revenue {
   display: flex !important;
   width: 260px;
   height: 90px;
-  margin: 35px 0 0 45px;
+  margin: 65px 0 0 43px;
   border-radius: 5px;
   background-color: white;
   align-content: center;
@@ -17,14 +21,14 @@
   }
   span {
     position: absolute;
-    top: 110px;
-    left: 130px;
+    top: 90px;
+    left: 125px;
     font-size: 14px !important;
   }
   p {
     position: absolute;
-    top: 80px;
-    left: 130px;
+    top: 65px;
+    left: 126px;
     font-weight: 700;
     font-size: 18px !important;
   }
@@ -34,7 +38,7 @@
   display: flex !important;
   width: 260px;
   height: 90px;
-  margin: 35px 0 0 45px;
+  margin: 55px 0 0 45px;
   border-radius: 5px;
   background-color: white;
   align-content: center;
@@ -48,13 +52,13 @@
   }
   span {
     position: absolute;
-    top: 110px;
+    top: 90px;
     left: 450px;
     font-size: 14px !important;
   }
   p {
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 450px;
     font-weight: 700;
     font-size: 18px !important;
@@ -65,26 +69,27 @@
   display: flex !important;
   width: 260px;
   height: 90px;
-  margin: 35px 0 0 45px;
+  margin: 57px 0 0 45px;
   border-radius: 5px;
   background-color: white;
   align-content: center;
   font-size: unset !important;
   .profit-icon {
     width: 70px;
+
     height: 70px;
     margin-left: 10px;
   }
   span {
     position: absolute;
-    top: 110px;
-    left: 745px;
+    top: 90px;
+    left: 740px;
     font-size: 14px !important;
   }
   p {
     position: absolute;
-    top: 80px;
-    left: 745px;
+    top: 70px;
+    left: 740px;
     font-weight: 700;
     font-size: 18px !important;
   }

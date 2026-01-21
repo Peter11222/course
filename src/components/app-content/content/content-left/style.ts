@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  position: fixed !important;
   align-items: flex-start !important;
   background-color: #f0f2f5;
   width: 200px;
@@ -32,12 +33,15 @@ export const ContentWrapper = styled.div`
   scrollbar-color: #ccc #f0f2f5 !important;
 `
 export const ContentLeft = styled.div`
+  margin-top: 50px;
+  height: 50px;
   .menu-icon {
     height: 100%;
 
     > div {
       display: flex;
       align-items: center;
+
       height: 50px;
       width: 200px;
       border-bottom: 1px gray solid;
@@ -109,6 +113,7 @@ export const CollapseContent = styled(Collapse)`
     display: flex !important;
     height: 50px !important;
     width: 100% !important;
+   
     align-items: center;
     border-bottom: 1px gray solid;
     padding-left: 46px !important;

@@ -1,20 +1,26 @@
 import React from 'react'
+import type { CalendarMode } from 'antd/es/calendar/generateCalendar'
+import { Dayjs } from 'dayjs'
+import { Calendar, Col, Radio, Row, Select } from 'antd'
 import {
   MenuOutlined,
   BankOutlined,
   CheckSquareOutlined,
-  TeamOutlined
+  TeamOutlined,
+  CalendarOutlined
 } from '@ant-design/icons'
-import {
-  Summary,
-  Collect,
-  TaskAndMessage
-} from '@/views/content-views/home/home-down/style'
 
+import { Summary, Collect, TaskAndMessage } from '@/views/home/style'
 import '@/assets/css/home/home.css'
-const HomeDown: React.FC = () => {
+const Home: React.FC = () => {
+  const onPanelChange = (value: Dayjs, mode: CalendarMode) => {
+    console.log(value.format('YYYY-MM-DD'), mode)
+  }
   return (
     <div>
+      <div className="home-title">
+        <span>首页</span>
+      </div>
       <Summary>
         <MenuOutlined />
         <span>经营概况</span>
@@ -152,11 +158,95 @@ const HomeDown: React.FC = () => {
         </div>
       </Collect>
       <TaskAndMessage>
-        <div className="task"></div>
-        <div className="message"></div>
+        <div className="task">
+          <CalendarOutlined style={{ fontSize: '16px' }} />
+          <span>日程任务</span>
+        </div>
+
+        <div className="date-pick">
+          <Calendar
+            fullscreen={false}
+            headerRender={({ value, type, onChange, onTypeChange }) => {
+              // 1. 修复月份显示：直接生成中文月份，避免 format 异常
+              const monthOptions = []
+              for (let i = 0; i < 12; i++) {
+                monthOptions.push(
+                  <Select.Option key={i} value={i} className="month-item">
+                    {`${i + 1}月`} {/* 直接显示 1月~12月，稳定无异常 */}
+                  </Select.Option>
+                )
+              }
+
+              // 2. 修复年份选项：确保 value 是数字类型
+              const year = value.year() // 当前年份（数字）
+              const month = value.month() // 当前月份（数字 0~11）
+              const options = []
+              for (let i = year - 10; i < year + 10; i += 1) {
+                options.push(
+                  <Select.Option key={i} value={i} className="year-item">
+                    {i} {/* 年份显示数字，如 2024 */}
+                  </Select.Option>
+                )
+              }
+
+              return (
+                <div className="calendar-header">
+                  <Row
+                    style={{
+                      display: 'flex',
+                      flexWrap: 'nowrap',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}
+                  >
+                    <Col>
+                      <Radio.Group
+                        size="middle"
+                        onChange={(e) => onTypeChange(e.target.value)}
+                        value={type}
+                        className="calendar-mode"
+                      >
+                        <Radio.Button value="month">Month</Radio.Button>
+                        <Radio.Button value="year">Year</Radio.Button>
+                      </Radio.Group>
+                    </Col>
+                    <Col className="year-select">
+                      <Select
+                        size="small"
+                        dropdownMatchSelectWidth={false}
+                        value={year}
+                        onChange={(newYear) => {
+                          const now = value.clone().year(Number(newYear)) // 显式转数字
+                          onChange(now)
+                        }}
+                      >
+                        {options}
+                      </Select>
+                    </Col>
+                    <Col className="month-select">
+                      <Select
+                        size="small"
+                        dropdownMatchSelectWidth={false}
+                        value={month}
+                        style={{ width: '80px' }}
+                        onChange={(newMonth) => {
+                          const now = value.clone().month(Number(newMonth)) // 显式转数字
+                          onChange(now)
+                        }}
+                      >
+                        {monthOptions}
+                      </Select>
+                    </Col>
+                  </Row>
+                </div>
+              )
+            }}
+            onPanelChange={onPanelChange}
+          />
+        </div>
       </TaskAndMessage>
     </div>
   )
 }
 
-export default HomeDown
+export default Home

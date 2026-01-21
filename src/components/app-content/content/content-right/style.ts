@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 export const ContentUp = styled.div`
-  position: absolute !important;
+  position: relative;
   transform: translateZ(0);
   background-color: #f0f2f5;
   display: flex;
-  left: 208px;
+  left: 200px;
   right: 8px;
-  top: 58px;
-  height: 50px;
-  z-index: 99999;
+  top: 44px;
+  height: 56px;
+
   align-items: center;
   box-sizing: border-box !important;
-  width: calc(100% - 208px - 8px) !important;
+  width: 100% !important;
   .anticon-minus {
     color: #4c068aff;
     transform: rotate(90deg) !important;
@@ -24,14 +24,14 @@ export const ContentUp = styled.div`
       font-size: 25px !important;
     }
   }
-  div {
+  .home-title {
     display: flex;
-
+    width: 100%;
     align-items: center;
   }
   span {
     font-size: 12px;
-    line-height: 50px;
+    line-height: 60px;
     align-items: center;
     margin-left: -2px !important;
   }

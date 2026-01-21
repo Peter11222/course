@@ -15,7 +15,7 @@ const AppHeader: React.FC = () => {
         <span>在线课程管理系统</span>
       </HeaderLeft>
       <HeaderRight>
-        <Button>
+        <Button className="header-btn">
           <Badge
             count={5}
             style={{
@@ -30,10 +30,16 @@ const AppHeader: React.FC = () => {
             <BellOutlined className="bell-icon" style={{ fontSize: '20px' }} />
           </Badge>
         </Button>
-        <Button icon={<UserOutlined style={{ fontSize: '20px' }} />}>
+        <Button
+          className="header-btn"
+          icon={<UserOutlined style={{ fontSize: '20px' }} />}
+        >
           账户设置
         </Button>
-        <Button icon={<PoweroffOutlined style={{ fontSize: '20px' }} />}>
+        <Button
+          className="header-btn"
+          icon={<PoweroffOutlined style={{ fontSize: '20px' }} />}
+        >
           退出登录
         </Button>
       </HeaderRight>
