@@ -1,5 +1,5 @@
 import React from 'react'
-const About: React.FC = () => {
+const AboutUs: React.FC = () => {
   return (
     <div>
       <span>关于我们</span>
@@ -7,4 +7,4 @@ const About: React.FC = () => {
   )
 }
 
-export default About
+export default AboutUs

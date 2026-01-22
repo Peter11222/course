@@ -1,5 +1,5 @@
 import React from 'react'
-const Notification: React.FC = () => {
+const MessageNotification: React.FC = () => {
   return (
     <div>
       <span>消息通知</span>
@@ -7,4 +7,4 @@ const Notification: React.FC = () => {
   )
 }
 
-export default Notification
+export default MessageNotification

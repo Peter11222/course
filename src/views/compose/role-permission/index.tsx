@@ -1,5 +1,5 @@
 import React from 'react'
-const Role: React.FC = () => {
+const RolePermission: React.FC = () => {
   return (
     <div>
       <span>角色权限</span>
@@ -7,4 +7,4 @@ const Role: React.FC = () => {
   )
 }
 
-export default Role
+export default RolePermission

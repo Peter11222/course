@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ContentUp = styled.div`
+export const RightMainContent = styled.div`
   position: relative;
   transform: translateZ(0);
   background-color: #f0f2f5;
@@ -24,7 +24,7 @@ export const ContentUp = styled.div`
       font-size: 25px !important;
     }
   }
-  .home-title {
+  .title {
     display: flex;
     width: 100%;
     align-items: center;
