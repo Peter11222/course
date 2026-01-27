@@ -13,7 +13,7 @@ position: relative;
     display: flex;
     align-items: center;
     gap: 8px;
-    top: 360px;
+    top: 330px;
     right: 320px;
     position: absolute;
     span {
@@ -30,7 +30,7 @@ position: relative;
   width: 289px;
   height: 260px;
   background-color: white;
-  top: 410px;
+  top: 380px;
   left: 980px;
   // 补充：需要 display: flex 才能让 align-items 生效
   display: flex; 
@@ -93,15 +93,15 @@ position: relative;
       border-radius: 2px !important; // 大圆角
       font-weight: 500;
 
-      &:hover {
-        background-color: #85CE61;
-        border-color: #67C23A !important;
+      // &:hover {
+      //   background-color: #85CE61;
+      //   border-color: #67C23A !important;
 
-      }
+      // }
 
       &:active {
-        background-color: #52C41A !important;
-    border-color: #389e0d !important;
+        background-color: #1999 !important;
+        border-color: #1999 !important;
       }
     }
   }

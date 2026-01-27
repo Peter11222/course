@@ -24,11 +24,8 @@ const Login: React.FC = () => {
             <div className='btn'>
                 <Button type='primary'>登录</Button>
             </div>
-        </div>
-            
-            
-        </div>
-        
+        </div>  
+    </div>
     </LoginWrapper>
 }
 
