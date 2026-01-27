@@ -1,5 +1,5 @@
 import React from 'react'
-import { RightMainContent } from '@/components/app-content/content/content-right/style'
+import { RightMainContent } from '@/components/content/app-content/content-right/style'
 
 import { MinusOutlined } from '@ant-design/icons'
 import { Outlet } from 'react-router-dom'

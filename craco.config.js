@@ -48,6 +48,15 @@ module.exports = {
         // ]
       })
 
+      webpackConfig.module.rules.push({
+        test: /\.(png|jpg|jpeg)$/,
+        include: resolve('src'),
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name].[hash:8].[ext]',
+        },
+      });
+
       return webpackConfig
     }
   }

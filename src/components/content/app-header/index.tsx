@@ -3,7 +3,7 @@ import {
   HeaderWrapper,
   HeaderLeft,
   HeaderRight
-} from '@/components/app-header/style'
+} from '@/components/content/app-header/style'
 import { Badge, Button } from 'antd'
 import { BellOutlined, UserOutlined, PoweroffOutlined } from '@ant-design/icons'
 

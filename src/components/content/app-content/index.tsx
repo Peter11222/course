@@ -1,6 +1,6 @@
 import React from 'react'
-import LeftContent from '@/components/app-content/content/content-left'
-import RightContent from '@/components/app-content/content/content-right'
+import LeftContent from '@/components/content/app-content/content-left'
+import RightContent from '@/components/content/app-content/content-right'
 
 const AppContent: React.FC = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useMemo } from 'react'
 import type { CollapseProps } from 'antd'
 import { Collapse } from 'antd'
 import {
@@ -17,7 +17,7 @@ import {
   ContentWrapper,
   ContentLeft,
   CollapseContent
-} from '@/components/app-content/content/content-left/style'
+} from '@/components/content/app-content/content-left/style'
 import {
   teachData,
   courseData,
@@ -46,8 +46,8 @@ const LeftContent: React.FC = () => {
     }
   }
   const [activeKeys, setActiveKeys] = useState<string[]>([])
-  const panelRouteMap = {
-    teach: '/teach/', // 教务中心
+  const panelRouteMap = useMemo(()=>({
+     teach: '/teach/', // 教务中心
     course: '/course/', // 课程管理
     order: '/order/', // 订单管理
     activity: '/activity/', // 活动管理
@@ -56,7 +56,8 @@ const LeftContent: React.FC = () => {
     organize: '/organize/', // 机构管理
     basic: '/basic/', // 基础管理
     compose: '/compose/' // 综合管理
-  }
+  }),[])
+  
 
   // 监听路由变化：通用收起逻辑（离开当前面板路由时自动收起）
   useEffect(() => {
@@ -76,7 +77,7 @@ const LeftContent: React.FC = () => {
     if (JSON.stringify(newActiveKeys) !== JSON.stringify(activeKeys)) {
       setActiveKeys(newActiveKeys)
     }
-  }, [currentPath])
+  }, [currentPath,panelRouteMap])
   const handleCollapseChange: CollapseProps['onChange'] = (keys) => {
     setActiveKeys(keys as string[])
   }
